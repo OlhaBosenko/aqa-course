@@ -1,0 +1,11 @@
+package api.imdb;
+
+import okhttp3.ResponseBody;
+import retrofit2.Call;
+import retrofit2.http.GET;
+
+public interface SearchService {
+
+    @GET("/{lang?}/API/Search/{apiKey}/{expression}")
+    Call<ResponseBody> listRepos();
+}
